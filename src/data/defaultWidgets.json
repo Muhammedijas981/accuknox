@@ -1,0 +1,237 @@
+{
+  "dashboardTitle": "CNAPP Dashboard",
+  "searchPlaceholder": "Search anything...",
+  "categories": [
+    {
+      "id": "cspm-executive",
+      "name": "CSPM Executive Dashboard",
+      "widgets": [
+        {
+          "id": "cloud-accounts",
+          "name": "Cloud Accounts",
+          "type": "donut-chart",
+          "data": {
+            "total": 4,
+            "chartData": [
+              {
+                "label": "Connected",
+                "value": 2,
+                "color": "#4A90E2"
+              },
+              {
+                "label": "Not Connected",
+                "value": 2,
+                "color": "#E0E0E0"
+              }
+            ]
+          }
+        },
+        {
+          "id": "cloud-account-risk",
+          "name": "Cloud Account Risk Assessment",
+          "type": "donut-chart",
+          "data": {
+            "total": 9659,
+            "chartData": [
+              {
+                "label": "Failed",
+                "value": 1689,
+                "color": "#D32F2F"
+              },
+              {
+                "label": "Warning",
+                "value": 681,
+                "color": "#FF9800"
+              },
+              {
+                "label": "Not available",
+                "value": 36,
+                "color": "#9E9E9E"
+              },
+              {
+                "label": "Passed",
+                "value": 7253,
+                "color": "#4CAF50"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "cwpp-dashboard",
+      "name": "CWPP Dashboard",
+      "widgets": [
+        {
+          "id": "namespace-alerts",
+          "name": "Top 5 Namespace Specific Alerts",
+          "type": "empty-state",
+          "data": {
+            "message": "No Graph data available!",
+            "icon": "analytics"
+          }
+        },
+        {
+          "id": "workload-alerts",
+          "name": "Workload Alerts",
+          "type": "empty-state",
+          "data": {
+            "message": "No Graph data available!",
+            "icon": "analytics"
+          }
+        }
+      ]
+    },
+    {
+      "id": "registry-scan",
+      "name": "Registry Scan",
+      "widgets": [
+        {
+          "id": "image-risk-assessment",
+          "name": "Image Risk Assessment",
+          "type": "progress-bar",
+          "data": {
+            "total": 1470,
+            "label": "Total Vulnerabilities",
+            "breakdown": [
+              {
+                "label": "Critical",
+                "value": 9,
+                "color": "#D32F2F"
+              },
+              {
+                "label": "High",
+                "value": 150,
+                "color": "#FF5722"
+              }
+            ]
+          }
+        },
+        {
+          "id": "image-security-issues",
+          "name": "Image Security Issues",
+          "type": "progress-bar",
+          "data": {
+            "total": 2,
+            "label": "Total Images",
+            "breakdown": [
+              {
+                "label": "Critical",
+                "value": 2,
+                "color": "#D32F2F"
+              },
+              {
+                "label": "High",
+                "value": 2,
+                "color": "#FF5722"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "availableWidgets": [
+    {
+      "id": "system-health",
+      "name": "System Health",
+      "type": "metric",
+      "category": "cspm-executive",
+      "data": {
+        "value": "98.5%",
+        "label": "System Uptime",
+        "status": "healthy",
+        "color": "#4CAF50"
+      }
+    },
+    {
+      "id": "active-threats",
+      "name": "Active Threats",
+      "type": "metric",
+      "category": "cwpp-dashboard",
+      "data": {
+        "value": "3",
+        "label": "Critical Threats",
+        "status": "warning",
+        "color": "#FF9800"
+      }
+    },
+    {
+      "id": "compliance-score",
+      "name": "Compliance Score",
+      "type": "progress-bar",
+      "category": "registry-scan",
+      "data": {
+        "total": 100,
+        "label": "Compliance Percentage",
+        "breakdown": [
+          {
+            "label": "Compliant",
+            "value": 87,
+            "color": "#4CAF50"
+          },
+          {
+            "label": "Non-Compliant",
+            "value": 13,
+            "color": "#D32F2F"
+          }
+        ]
+      }
+    },
+    {
+      "id": "network-security",
+      "name": "Network Security",
+      "type": "metric",
+      "category": "cwpp-dashboard",
+      "data": {
+        "value": "12",
+        "label": "Active Connections",
+        "status": "normal",
+        "color": "#4A90E2"
+      }
+    },
+    {
+      "id": "data-encryption",
+      "name": "Data Encryption",
+      "type": "donut-chart",
+      "category": "cspm-executive",
+      "data": {
+        "total": 500,
+        "chartData": [
+          {
+            "label": "Encrypted",
+            "value": 450,
+            "color": "#4CAF50"
+          },
+          {
+            "label": "Unencrypted",
+            "value": 50,
+            "color": "#D32F2F"
+          }
+        ]
+      }
+    },
+    {
+      "id": "api-security",
+      "name": "API Security Score",
+      "type": "progress-bar",
+      "category": "registry-scan",
+      "data": {
+        "total": 100,
+        "label": "API Security Rating",
+        "breakdown": [
+          {
+            "label": "Secure APIs",
+            "value": 92,
+            "color": "#4CAF50"
+          },
+          {
+            "label": "Vulnerable APIs",
+            "value": 8,
+            "color": "#FF9800"
+          }
+        ]
+      }
+    }
+  ]
+}
