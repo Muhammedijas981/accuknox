@@ -19,8 +19,9 @@ const SearchBar = () => {
           borderRadius: "5px",
           paddingLeft: "30px",
           paddingRight: "15px",
-          fontSize: "10px",
-          color: "#6B7280",
+          fontSize: "9px",
+          fontWeight: "600",
+          color: "#cfd1d3ff",
           outline: "none",
         }}
       />
