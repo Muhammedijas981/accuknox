@@ -1,0 +1,44 @@
+.top-bar {
+    display: flex;
+    flex: 1;
+}
+.breadcrumb {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+    color: black;
+    font-size: 10px;
+    font-weight: 500;
+    /* background-color: lightblue; */
+}
+.breadcrumb-home {
+  color: rgb(212, 208, 208);
+}
+
+.seprator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+.search-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 40px;
+    flex: 3;
+    /* background-color: yellowgreen; */
+}
+.top-bar-actions {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1;
+    /* background-color: orange; */
+}
+.span {
+    padding: 0px;
+
+}
