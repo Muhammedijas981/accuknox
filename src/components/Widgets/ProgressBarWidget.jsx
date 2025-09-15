@@ -12,25 +12,18 @@ const ProgressBarWidget = ({ data }) => {
   const { total, label, breakdown } = data;
 
   return (
-    <div className="space-y-4">
-      {/* Total Count */}
-      <div className="text-center">
-        <div
-          className="text-3xl font-bold"
-          style={{ color: "var(--text-primary)" }}
-        >
-          {total}
-        </div>
-        <div className="text-sm" style={{ color: "var(--text-secondary)" }}>
-          {label}
-        </div>
+    <div className="space-y-2">
+      {/* Total and Label */}
+      <div className="flex items-center gap-1">
+        <span className="font-medium">{total}</span>
+        <span className="text-sm text-gray-600">{label}</span>
       </div>
 
       {/* Progress Bar */}
       <div className="relative">
         <div
-          className="w-full h-2 rounded-full overflow-hidden"
-          style={{ backgroundColor: "#f0f0f0" }}
+          className="w-full h-4 overflow-hidden"
+          style={{ backgroundColor: "#E5E7EB" }}
         >
           <div className="h-full flex">
             {breakdown.map((item, index) => {
@@ -51,20 +44,16 @@ const ProgressBarWidget = ({ data }) => {
       </div>
 
       {/* Legend */}
-      <div className="grid grid-cols-2 gap-2">
+      <div className="space-y-1">
         {breakdown.map((item, index) => (
           <div key={index} className="flex items-center gap-2">
             <div
-              className="w-3 h-3 rounded-full flex-shrink-0"
+              className="w-2 h-2 rounded-full flex-shrink-0"
               style={{ backgroundColor: item.color }}
             />
-            <div className="flex-1 min-w-0">
-              <div
-                className="text-sm font-medium truncate"
-                style={{ color: "var(--text-primary)" }}
-              >
-                {item.label} ({item.value})
-              </div>
+            <div className="flex-1 min-w-0 flex items-center">
+              <span className="text-sm font-medium">{item.label}</span>
+              <span className="text-sm text-gray-600 ml-1">({item.value})</span>
             </div>
           </div>
         ))}

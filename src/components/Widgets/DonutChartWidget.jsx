@@ -3,30 +3,29 @@ import React from "react";
 const DonutChartWidget = ({ data }) => {
   if (!data || !data.chartData) {
     return (
-      <div className="text-center text-gray-500 py-8">
-        No chart data available
+      <div className="empty-state-container">
+        <span className="empty-state-text">No chart data available</span>
       </div>
     );
   }
 
   const { total, chartData } = data;
   const radius = 60;
-  const strokeWidth = 15;
+  const strokeWidth = 20;
   const circumference = 2 * Math.PI * radius;
 
   let cumulativePercentage = 0;
 
   return (
-    <div className="flex items-center justify-center">
-      <div className="relative">
-        {/* SVG Donut Chart */}
-        <svg width="160" height="160" className="transform -rotate-90">
+    <div className="donut-chart-container">
+      <div className="donut-chart-wrapper">
+        <svg width="140" height="140" className="transform -rotate-90">
           <circle
-            cx="80"
-            cy="80"
+            cx="70"
+            cy="70"
             r={radius}
             fill="none"
-            stroke="#f0f0f0"
+            stroke="#F3F4F6"
             strokeWidth={strokeWidth}
           />
 
@@ -45,8 +44,8 @@ const DonutChartWidget = ({ data }) => {
             return (
               <circle
                 key={index}
-                cx="80"
-                cy="80"
+                cx="70"
+                cy="70"
                 r={radius}
                 fill="none"
                 stroke={item.color}
@@ -59,32 +58,20 @@ const DonutChartWidget = ({ data }) => {
           })}
         </svg>
 
-        {/* Center Text */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <div
-            className="text-2xl font-bold"
-            style={{ color: "var(--text-primary)" }}
-          >
-            {total}
-          </div>
-          <div className="text-sm" style={{ color: "var(--text-secondary)" }}>
-            Total
-          </div>
+        <div className="donut-center-text">
+          <div className="donut-center-number">{total}</div>
+          <div className="donut-center-label">Total</div>
         </div>
       </div>
 
-      {/* Legend */}
-      <div className="ml-6 space-y-2">
+      <div className="donut-legend">
         {chartData.map((item, index) => (
-          <div key={index} className="flex items-center gap-2">
+          <div key={index} className="legend-item">
             <div
-              className="w-3 h-3 rounded-full"
+              className="legend-dot"
               style={{ backgroundColor: item.color }}
             />
-            <span
-              className="text-sm"
-              style={{ color: "var(--text-secondary)" }}
-            >
+            <span className="legend-text">
               {item.label} ({item.value})
             </span>
           </div>

@@ -1,0 +1,349 @@
+/* Widget Container Styles */
+.widget-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Base Widget Card */
+.card {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Widget Header - RED BAR */
+.card-header {
+  color: #FFFFFF;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 48px;
+}
+
+.card-header h3 {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Remove Widget Button */
+.widget-remove-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.widget-remove-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.widget-remove-btn svg {
+  width: 16px;
+  height: 16px;
+  color: #FFFFFF;
+}
+
+/* Widget Content */
+.card-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #FFFFFF;
+}
+
+/* Donut Chart Widget Styles */
+.donut-chart-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  height: 100%;
+}
+
+.donut-chart-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.donut-center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.donut-center-number {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1F2937;
+  line-height: 1;
+}
+
+.donut-center-label {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #9CA3AF;
+  margin-top: 4px;
+}
+
+/* Legend Styles */
+.donut-legend {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legend-text {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #6B7280;
+  line-height: 1.3;
+}
+
+/* Empty State Widget */
+.empty-state-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 180px;
+}
+
+.empty-state-icon {
+  margin-bottom: 16px;
+  opacity: 0.4;
+}
+
+.empty-state-icon svg {
+  color: #D1D5DB;
+  width: 48px;
+  height: 48px;
+}
+
+.empty-state-text {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #9CA3AF;
+  line-height: 1.4;
+}
+
+/* Metric Widget */
+.metric-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 180px;
+  justify-content: center;
+  gap: 8px;
+}
+
+.metric-value {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  color: #16A34A;
+}
+
+.metric-icon {
+  margin-left: 8px;
+  color: #16A34A;
+}
+
+.metric-label {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #6B7280;
+  margin-bottom: 4px;
+}
+
+.metric-status {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #16A34A;
+}
+
+/* Progress Bar Widget */
+.progress-widget-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 180px;
+  justify-content: center;
+}
+
+.progress-header {
+  text-align: center;
+}
+
+.progress-number {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1F2937;
+  line-height: 1;
+}
+
+.progress-label {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #6B7280;
+  margin-top: 6px;
+}
+
+/* Progress Bar */
+.progress-bar-container {
+  width: 100%;
+  height: 8px;
+  background: #F3F4F6;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  display: flex;
+  border-radius: 4px;
+}
+
+.progress-segment {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+/* Progress Legend */
+.progress-legend {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.progress-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.progress-legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.progress-legend-text {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #374151;
+  line-height: 1.3;
+}
+
+/* Add Widget Card */
+.add-widget-card {
+  background: #FFFFFF;
+  border: 2px dashed #D1D5DB;
+  border-radius: 12px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-widget-card:hover {
+  border-color: #9CA3AF;
+  background: #F9FAFB;
+}
+
+.add-widget-icon {
+  margin-bottom: 12px;
+  color: #9CA3AF;
+  transition: color 0.2s ease;
+}
+
+.add-widget-card:hover .add-widget-icon {
+  color: #6B7280;
+}
+
+.add-widget-text {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #9CA3AF;
+  transition: color 0.2s ease;
+}
+
+.add-widget-card:hover .add-widget-text {
+  color: #6B7280;
+}
+
+/* Category Section */
+.category-section {
+  margin-bottom: 40px;
+}
+
+.category-title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1F2937;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  padding: 8px 16px;
+  background: #3B82F6;
+  color: #FFFFFF;
+  border-radius: 8px;
+  display: inline-block;
+}

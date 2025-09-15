@@ -1,0 +1,106 @@
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 5px;
+  background: #F8FAFC;
+}
+
+.dashboard-title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1E293B;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.dashboard-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+}
+
+.add-widget-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px; 
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 6px;
+  padding: 6px 12px; 
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-widget-btn:hover {
+  background: #F9FAFB;
+  border-color: #D1D5DB;
+}
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px; 
+  height: 32px; 
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 6px; 
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.icon-button:hover {
+  background: #F9FAFB;
+  border-color: #D1D5DB;
+}
+
+.icon-button .MuiSvgIcon-root {
+  font-size: 16px; /* Reduced from 20px */
+  color: #6B7280;
+}
+
+.time-filter {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* Reduced from 8px */
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 6px; /* Reduced from 8px */
+  padding: 6px 10px; /* Reduced from 10px 12px */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 12px; /* Reduced from 14px */
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.time-filter:hover {
+  background: #F9FAFB;
+  border-color: #D1D5DB;
+}
+
+.time-filter .MuiSvgIcon-root {
+  font-size: 14px; /* Reduced from 16px */
+  color: #6B7280;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    gap: 12px; /* Reduced from 16px */
+    align-items: flex-start;
+  }
+  
+  .dashboard-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
